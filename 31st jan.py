@@ -1,36 +1,62 @@
-def patternprint():
-    l = int(input("Which pattern do you want? "))
-    l1 = '*'
-    l2 = '* *'
-    l3 = '* * *'
-    l4 = '* * * *'
-    l5 = '* * * * *'
-    l1r = '    *'
-    l2r = '   * *'
-    l3r = '  * * *'
-    l4r = ' * * * *'
-    l1e = '        *'
-    l2e = '       * *'
-    l3e = '      * * *'
-    l4e = '     * * * *'
-    l5e = '    * * * * *'
-    l6e = '   * * * * * *'
-    l7e = '  * * * * * * *'
-    l8e = ' * * * * * * * *'
-    l9e = '* * * * * * * * *'
-    if l == 1:
-        print(l1 + '\n' + l2 + '\n' + l3 + '\n' + l4 + '\n' + l5)
-    if l == 2:
-        print(l5 + '\n' + l4 + '\n' + l3 + '\n' + l2 + '\n' + l1)
-    if l == 3:
-        print(l1r + '\n' + l2r + '\n' + l3r + '\n' + l4r + '\n' + l5)
-    if l == 4:
-        print(l5 + '\n' + l4r + '\n' + l3r + '\n' + l2r + '\n' + l1r)
-    if l == 5:
-        print(l1e + '\n' + l2e + '\n' + l3e + '\n' + l4e + '\n' + l5e + '\n' + l6e + '\n' + l7e + '\n' + l8e + '\n' + l9e)
-    if l == 6:
-        print(l9e + '\n' + l8e + '\n' + l7e + '\n' + l6e + '\n' + l5e + '\n' + l4e + '\n' + l3e + '\n' + l2e + '\n' + l1e)
-    if l == 7:
-        print(l1e + '\n' + l2e + '\n' + l3e + '\n' + l4e + '\n' + l4e + '\n' + l3e + '\n' + l2e + '\n' + l1e)
+def patternprint(n,y):
+    if y == 1:
+        for i in range(n):
+            for j in range(i + 1):
+                print('$',end = ' ')
+            print('')
+    if y == 2:
+        for u in range(n):
+            for k in range(u,n):
+                print('!',end = ' ')
+            print('')
+    if y == 3:
+        for t in range(n):
+            for w in range(t,n):
+                print(' ',end = ' ')
+            for l in range(t + 1):
+                print('#',end = ' ')
+            print()
+    if y == 4:
+        for s in range(n):
+            for e in range(s + 1):
+                print(' ',end = ' ')
+            for x in range(s,n):
+                print('%',end = ' ')
+            print()
+    if y == 5:
+        for d in range(n):
+            for g in range(d,n):
+                print(' ',end = ' ')
+            for m in range(d):
+                print('@',end = ' ')
+            for m in range(d + 1):
+                print('@',end = ' ')
+            print()
+    if y == 6:
+        for z in range(n):
+            for p in range(z + 1):
+                print(' ',end = ' ')
+            for v in range(z,n-1):
+                print('/',end = ' ')
+            for v in range(z,n):
+                print('/',end = ' ')
+            print()
+    if y == 7:
+        for d in range(n):
+            for g in range(d,n):
+                print(' ',end = ' ')
+            for m in range(d):
+                print('&',end = ' ')
+            for m in range(d + 1):
+                print('&',end = ' ')
+            print()
+        for d in range(n):
+            for g in range(d + 1):
+                print(' ',end = ' ')
+            for m in range(d,n-1):
+                print('&',end = ' ')
+            for m in range(d,n):
+                print('&',end = ' ')
+            print()
 
-patternprint()
+patternprint(5,7)
